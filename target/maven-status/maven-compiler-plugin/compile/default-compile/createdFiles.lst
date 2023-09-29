@@ -1,0 +1,6 @@
+com\curso\service\LibrosService.class
+com\curso\dao\LibrosDao.class
+com\curso\service\LibrosServiceImpl.class
+com\curso\model\Libro.class
+com\curso\nuevo_libros\NuevoLibrosApplication.class
+com\curso\controller\LibrosController.class

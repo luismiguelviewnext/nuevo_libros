@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-NuevoLibrosApplication<nuevo_libros>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.curso.nuevo_libros.NuevoLibrosApplication",
+            "projectName": "nuevo_libros",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
