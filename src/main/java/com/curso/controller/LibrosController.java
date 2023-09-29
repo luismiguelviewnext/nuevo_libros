@@ -34,7 +34,7 @@ public class LibrosController {
      * Partimos de la anotación @GetMapping con el endpoint /libros y
      * con produces = MediaType.APPLICATION_JSON_VALUE nos devuelve un JSON
      */
-    @GetMapping(value="libro", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value="libros", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Libro> listarLibros() {
         return librosService.listarLibros();
     }
