@@ -2,7 +2,6 @@ package com.curso.controller;
 
 import java.util.List;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -11,11 +10,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.curso.model.Libro;
 import com.curso.service.LibrosService;
+
 /*
  * Indicamos que es un controlador REST
  */
@@ -34,7 +33,7 @@ public class LibrosController {
      * Partimos de la anotación @GetMapping con el endpoint /libros y
      * con produces = MediaType.APPLICATION_JSON_VALUE nos devuelve un JSON
      */
-    @GetMapping(value="libros", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "libros", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Libro> listarLibros() {
         return librosService.listarLibros();
     }
@@ -46,9 +45,9 @@ public class LibrosController {
      * con consumes = MediaType.APPLICATION_JSON_VALUE nos devuelve un JSON
      * Con @RequestBody recibe un objeto Libro en el cuerpo de la petición
      */
-    @PostMapping(value="libro", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value = "libro", consumes = MediaType.APPLICATION_JSON_VALUE)
     public void crearLibro(@RequestBody Libro libro) {
-        librosService.crearLibro(libro);       
+        librosService.crearLibro(libro);
     }
 
     /*
@@ -58,8 +57,8 @@ public class LibrosController {
      * con consumes = MediaType.APPLICATION_JSON_VALUE nos devuelve un JSON
      * Con @RequestBody recibe un objeto Libro en el cuerpo de la petición
      */
-    @PutMapping(value="libro", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public void actualizarLibro(@RequestBody Libro libro){
+    @PutMapping(value = "libro", consumes = MediaType.APPLICATION_JSON_VALUE)
+    public void actualizarLibro(@RequestBody Libro libro) {
         librosService.actualizarLibro(libro);
     }
 
@@ -71,12 +70,9 @@ public class LibrosController {
      * 
      * Con @PathVariable recibe el ISBN del libro
      */
-    @DeleteMapping(value="libro/{isbn}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<Libro> eliminarLibros(@PathVariable ("isbn") int isbn ){
-       return librosService.eliminarLibro(isbn);  
+    @DeleteMapping(value = "libro/{isbn}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<Libro> eliminarLibros(@PathVariable("isbn") int isbn) {
+        return librosService.eliminarLibro(isbn);
     }
 
-    
-
-    
 }

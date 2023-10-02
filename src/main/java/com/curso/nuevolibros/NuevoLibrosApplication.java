@@ -1,4 +1,4 @@
-package com.curso.nuevo_libros;
+package com.curso.nuevolibros;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
